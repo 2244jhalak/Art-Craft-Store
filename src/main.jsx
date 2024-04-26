@@ -15,6 +15,9 @@ import Home from './components/Home/Home';
 import AuthProvider from './provider/AuthProvider';
 
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import AllArtAndCraft from './components/AllArtAndCraft/AllArtAndCraft';
+import AddCraftItem from './components/AddCraftItem/AddCraftItem';
+import MyArtAndCraft from './components/MyArtAndCraft/MyArtAndCraft';
 
 // import UserProfile from './components/UserProfile/UserProfile';
 // import UpdateProfile from './components/UpdateProfile/UpdateProfile';
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
         path:"/",
         element:<Home></Home>
       },
+      {
+        path:"/all",
+        element:<AllArtAndCraft></AllArtAndCraft>
+      },
+      {
+        path:"/addCraft",
+        element:<AddCraftItem></AddCraftItem>
+      },
+      {
+        path:"/myCraft",
+        element:<MyArtAndCraft></MyArtAndCraft>
+      }
       // {
       //   path:"/login",
       //   element:<Login></Login>

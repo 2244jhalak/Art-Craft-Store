@@ -7,11 +7,12 @@ const Footer = () => {
             <footer className="footer p-10 bg-neutral text-neutral-content">
   <aside>
     
-    <h3 className="text-3xl font-semibold text-white">Dreamdwellings</h3>
+    <h3 className="text-3xl font-semibold text-white">RusticRopeCrafts</h3>
     <p className="mb-3 text-white text-lg">Where Imagination Meets Reality</p>
-      <Link className="hover:text-orange-400" to="/">Home</Link>
-      <Link className="hover:text-orange-400" to="/contact">Contact</Link>
-      <Link className="hover:text-orange-400" to="/agents">Our Agents</Link>
+        <Link className='hover:text-orange-400' to="/">Home</Link>
+        <Link className='hover:text-orange-400' to="/all">All Art & craft Items</Link>
+        <Link className='hover:text-orange-400' to="/addCraft">Add Craft Item</Link>
+        <Link className='hover:text-orange-400' to="/myCraft">My Art&Craft List</Link>
       
   </aside> 
   <nav>
@@ -25,7 +26,7 @@ const Footer = () => {
     </div>
   </nav>
 </footer>
-<p className="pl-10 text-sm">&copy; 2024 Dreamdwellings- All right reserved</p>
+<p className="pl-10 text-sm">&copy; 2024 RusticRopeCrafts- All right reserved</p>
 
             
         </div>
