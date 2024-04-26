@@ -18,6 +18,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import AllArtAndCraft from './components/AllArtAndCraft/AllArtAndCraft';
 import AddCraftItem from './components/AddCraftItem/AddCraftItem';
 import MyArtAndCraft from './components/MyArtAndCraft/MyArtAndCraft';
+import PrivateRoute from './Routes/PrivateRoute';
 
 // import UserProfile from './components/UserProfile/UserProfile';
 // import UpdateProfile from './components/UpdateProfile/UpdateProfile';
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/addCraft",
-        element:<AddCraftItem></AddCraftItem>
+        element:<PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
       },
       {
         path:"/myCraft",
-        element:<MyArtAndCraft></MyArtAndCraft>
+        element:<PrivateRoute><MyArtAndCraft></MyArtAndCraft></PrivateRoute>
       },
       {
         path:"/login",
