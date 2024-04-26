@@ -10,8 +10,8 @@ import './index.css'
 import Root from './Layout/Root';
 import Home from './components/Home/Home';
 
-// import Login from './components/Login/Login';
-// import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 import AuthProvider from './provider/AuthProvider';
 
 import ErrorPage from './components/ErrorPage/ErrorPage';
@@ -44,15 +44,15 @@ const router = createBrowserRouter([
       {
         path:"/myCraft",
         element:<MyArtAndCraft></MyArtAndCraft>
-      }
-      // {
-      //   path:"/login",
-      //   element:<Login></Login>
-      // },
-      // {
-      //   path:"/register",
-      //   element:<Register></Register>
-      // },
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/register",
+        element:<Register></Register>
+      },
      
       
      
