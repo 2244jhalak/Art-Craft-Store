@@ -18,6 +18,7 @@ const AllArtAndCraft = () => {
         <th>Customization</th>
         <th>Stock Status</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -33,6 +34,7 @@ const AllArtAndCraft = () => {
         <td>
             <Link to={`/craft/${craft._id}`}><button className="btn">View Details</button></Link>
         </td>
+        
       </tr>
         )
       }
