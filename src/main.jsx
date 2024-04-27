@@ -20,8 +20,8 @@ import AddCraftItem from './components/AddCraftItem/AddCraftItem';
 import MyArtAndCraft from './components/MyArtAndCraft/MyArtAndCraft';
 import PrivateRoute from './Routes/PrivateRoute';
 
-// import UserProfile from './components/UserProfile/UserProfile';
-// import UpdateProfile from './components/UpdateProfile/UpdateProfile';
+import UserProfile from './components/UserProfile/UserProfile';
+import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 
 
 const router = createBrowserRouter([
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path:"/all",
         element:<AllArtAndCraft></AllArtAndCraft>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader:()=>fetch(' http://localhost:5000/craft')
       },
       {
         path:"/addCraft",
@@ -61,14 +61,14 @@ const router = createBrowserRouter([
       
      
       
-      // {
-      //   path:"/userProfile",
-      //   element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
-      // },
-      // {
-      //   path:"/updateProfile",
-      //   element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
-      // },
+      {
+        path:"/userProfile",
+        element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+      },
+      {
+        path:"/updateProfile",
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
      
     ]
   },

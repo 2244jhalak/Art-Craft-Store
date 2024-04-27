@@ -38,14 +38,15 @@ const Banner = () => {
             <div className='text-2xl my-5 font-semibold text-center'>
             <Typewriter
       words={['Welcome to RusticRopeCraft, where timeless elegance meets sustainable craftsmanship.']}
-      loop={5}
+      loop= {1}
       cursor
-      cursorStyle='_'
+      cursorStyle=''
       typeSpeed={70}
-      deleteSpeed={70}
+    //   deleteSpeed={70}
       delaySpeed={1000}
     />
             </div>
+            
            
     
             </div>
