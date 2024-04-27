@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
@@ -16,14 +17,17 @@ const Banner = () => {
                       <SwiperSlide>
                                <img className='w-full lg:h-[600px] h-[270px] md:h-[450px] rounded-b-lg' src={Slide1} alt="" />
                                
+                               
                       </SwiperSlide>
                       <SwiperSlide>
                                 <img className='w-full lg:h-[600px] h-[270px] md:h-[450px] rounded-b-lg' src={Slide2} alt="" />
+                                
                                 
                                
                       </SwiperSlide>
                       <SwiperSlide>
                                 <img className='w-full lg:h-[600px] h-[270px] md:h-[450px] rounded-b-lg' src={Slide3} alt="" />
+                                
                                 
                       
                       </SwiperSlide>
@@ -31,8 +35,23 @@ const Banner = () => {
                 </Swiper>
                 
             </div>
+            <div className='text-2xl my-5 font-semibold text-center'>
+            <Typewriter
+      words={['Welcome to RusticRopeCraft, where timeless elegance meets sustainable craftsmanship.']}
+      loop={5}
+      cursor
+      cursorStyle='_'
+      typeSpeed={70}
+      deleteSpeed={70}
+      delaySpeed={1000}
+    />
+            </div>
+           
+    
+            </div>
+
             
-        </div>
+       
     );
 };
 
