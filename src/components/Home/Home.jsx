@@ -1,4 +1,5 @@
 
+import ArtAndCraftCategories from "../ArtAndCraftCategories/ArtAndCraftCategories";
 import Banner from "../Banner/Banner";
 import Crafts from "../Crafts/Crafts";
 
@@ -12,6 +13,7 @@ const Home = () => {
            
             <Banner></Banner>
             <Crafts></Crafts>
+            <ArtAndCraftCategories></ArtAndCraftCategories>
             
             
            
