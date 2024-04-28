@@ -32,7 +32,7 @@ const AllArtAndCraft = () => {
         <td>{craft.customization}</td>
         <td>{craft.stockStatus}</td>
         <td>
-            <Link to={`/craft/${craft._id}`}><button className="btn">View Details</button></Link>
+        <Link to={`/details/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'>View Details</button></Link>
         </td>
         
       </tr>

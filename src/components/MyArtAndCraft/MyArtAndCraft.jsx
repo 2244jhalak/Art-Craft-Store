@@ -10,7 +10,7 @@ const MyArtAndCraft = () => {
     const {user} =useContext(AuthContext);
     const [crafts,setCrafts] =useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/craft/${user.email}`)
+        fetch(`http://localhost:5000/myProduct/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setCrafts(data))
     },[user])
@@ -51,8 +51,8 @@ const MyArtAndCraft = () => {
          
   </div>
   <div className='text-right mx-4 my-3'>
-  <Link to={`/details/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'><FaPen></FaPen></button></Link>
-  <Link to={`/details/${craft._id}`}><button className='btn text-white bg-green-600'><FaTrash></FaTrash></button></Link>
+  <Link to={`/craft/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'><FaPen></FaPen></button></Link>
+  <Link to={`/craft/${craft._id}`}><button className='btn text-white bg-green-600'><FaTrash></FaTrash></button></Link>
     
   </div>
 </div>

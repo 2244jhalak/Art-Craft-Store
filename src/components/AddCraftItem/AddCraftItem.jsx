@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../../provider/AuthProvider';
 
 const AddCraftItem = () => {
+    const {user}=useContext(AuthContext);
+    const email=user.email;
     const handleSubmit = e =>{
         e.preventDefault();
         const form=e.target;
@@ -52,7 +56,7 @@ const AddCraftItem = () => {
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="processing_time" placeholder="processing_time" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="stockStatus" placeholder="stockStatus" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="User_Name" placeholder="User_Name" id="" />
-                    <input className="h-10 bg-gray-100 rounded col-span-2 pl-5 text-black" type="email" name="User_Email" placeholder="User_Email" id="" />
+                    <input className="h-10 bg-gray-100 rounded col-span-2 pl-5 text-black" defaultValue={email} type="email" name="User_Email" placeholder="User_Email" id="" />
                     <input className="bg-green-600 text-white font-semibold rounded col-span-2 pl-5 cursor-pointer h-10" type="submit" value="Add" />
                 </div>
             </form>

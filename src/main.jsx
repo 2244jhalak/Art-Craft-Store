@@ -23,6 +23,8 @@ import PrivateRoute from './Routes/PrivateRoute';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 
+import CraftDetails from './components/CraftDetails/CraftDetails';
+
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,13 @@ const router = createBrowserRouter([
         
 
       },
+      {
+        path: "/details/:id",
+        element: <CraftDetails></CraftDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+      }
+      
+      ,
       {
         path:"/login",
         element:<Login></Login>
