@@ -17,7 +17,7 @@ const Footer = () => {
   </aside> 
   <nav>
     
-    <h6 className="text-2xl footer-title">Address & Contact</h6>
+    <h6 className="text-2xl footer-title">Contact</h6>
     <p>House No : 21(Block-B)</p>
     <p>Mirpur 10, Dhaka</p>
     
