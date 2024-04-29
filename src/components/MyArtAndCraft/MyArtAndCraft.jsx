@@ -11,11 +11,13 @@ const MyArtAndCraft = () => {
     const {user} =useContext(AuthContext);
     const [crafts,setCrafts] =useState([]);
     
+    
     useEffect(()=>{
         fetch(`http://localhost:5000/myProduct/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setCrafts(data))
     },[user])
+    
    
    
     const handleDelete=id=>{
@@ -57,18 +59,19 @@ const MyArtAndCraft = () => {
     return (
         <div className="my-10">
             <h2>This is my world {crafts.length}</h2>
+            
            
-            <div className="grid grid-cols-2 px-40 gap-20">
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-40 lg:gap-20">
 
             {
                 crafts.map(craft=>
                     <div key={craft._id}>
-            <div className="card w-full h-[500px] bg-base-100 shadow-xl lg:mb-0 md:mb-0 mb-3">
+            <div className="card dark:text-black md:mb-3 w-full h-[500px] bg-base-100 shadow-xl lg:mb-0 mb-3">
   <figure>
     <img className='h-60 w-3/4 mt-10 rounded-lg' src={craft.image} alt="Shoes" />
     
   </figure>
-  <div className="px-12 space-y-4 pt-3">
+  <div className="px-12 md:px-24 space-y-4 pt-3">
     <h2 className="card-title">{craft.item_name}</h2>
     
    
@@ -91,7 +94,7 @@ const MyArtAndCraft = () => {
     
          
   </div>
-  <div className='text-right mx-4 my-3'>
+  <div className='text-right lg:mx-4 md:mx-24 my-3'>
   <Link to={`/updateCraft/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'><FaPen></FaPen></button></Link>
  <button onClick={()=>handleDelete(craft._id)} className='btn text-white bg-green-600'><FaTrash></FaTrash></button>
     
@@ -107,3 +110,4 @@ const MyArtAndCraft = () => {
     );
           }
 export default MyArtAndCraft;
+

@@ -6,6 +6,7 @@ const SingleCategory = () => {
     const crafts=useLoaderData();
     
     console.log(crafts);
+   
     
     
     return (

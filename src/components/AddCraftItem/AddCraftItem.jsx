@@ -43,10 +43,10 @@ const AddCraftItem = () => {
     }
     return (
         <div>
-            <h2>Add something</h2>
+            <h2 className='mt-5 text-center font-bold text-3xl'>Add Art & Craft Items</h2>
             <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-x-7 gap-y-7 p-20">
-                    <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="image" placeholder="image" id="" />
+                <div className="flex flex-col gap-x-7 gap-y-7 lg:p-20 md:p-10 p-5">
+                    <input className="h-10 bg-gray-100 rounded pl-5 text-black inline-block" type="text" name="image" placeholder="image" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="item_name" placeholder="item_name" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="subcategory_Name" placeholder="subcategory_Name" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="short_description" placeholder="short_description" id="" />
@@ -56,8 +56,8 @@ const AddCraftItem = () => {
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="processing_time" placeholder="processing_time" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="stockStatus" placeholder="stockStatus" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" type="text" name="User_Name" placeholder="User_Name" id="" />
-                    <input className="h-10 bg-gray-100 rounded col-span-2 pl-5 text-black" defaultValue={email} type="email" name="User_Email" placeholder="User_Email" id="" />
-                    <input className="bg-green-600 text-white font-semibold rounded col-span-2 pl-5 cursor-pointer h-10" type="submit" value="Add" />
+                    <input className="h-10 bg-gray-100 rounded pl-5 text-black" defaultValue={email} type="email" name="User_Email" placeholder="User_Email" id="" />
+                    <input className="bg-green-600 text-white font-semibold rounded pl-5 cursor-pointer h-10" type="submit" value="Add" />
                 </div>
             </form>
             

@@ -11,7 +11,7 @@ const CraftDetails = () => {
     return (
         <div className='px-20 my-16'>
             <div>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card dark:text-black lg:card-side bg-base-100 shadow-xl">
   <figure><img className='lg:h-[400px] md:h-[400px] h-[200px]' src={image} alt="Album"/></figure>
   <div className="p-5 space-y-3">
     <h2 className="text-3xl font-bold">{item_name}</h2>

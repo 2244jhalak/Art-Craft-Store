@@ -49,9 +49,9 @@ const UpdateCraftItem = () => {
     
     return (
         <div>
-            <h2>Update something</h2>
+            <h2 className='mt-5 text-center font-bold text-3xl'>Update Art & Craft Items</h2>
             <form onSubmit={handleUpdate}>
-                <div className="grid grid-cols-2 gap-x-7 gap-y-7 p-20">
+                <div className="flex flex-col gap-x-7 gap-y-7 lg:p-20 md:p-10 p-5">
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" defaultValue={image} type="text" name="image" placeholder="image" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" defaultValue={item_name} type="text" name="item_name" placeholder="item_name" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" defaultValue={subcategory_Name} type="text" name="subcategory_Name" placeholder="subcategory_Name" id="" />

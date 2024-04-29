@@ -19,7 +19,7 @@ const Crafts = () => {
             {
                 crafts.map(craft=>
                     <div key={craft._id}>
-            <div className="card w-full h-[450px] bg-base-100 shadow-xl lg:mb-0 md:mb-0 mb-3">
+            <div className='card w-full dark:text-black h-[450px] bg-base-100 shadow-xl lg:mb-0 md:mb-0 mb-3'>
   <figure>
     <img className='h-60 w-3/4 mt-10 rounded-lg' src={craft.image} alt="Shoes" />
     

@@ -66,7 +66,7 @@ const UpdateProfile = () => {
                         <label>
                             Name:
                             <input
-                                className="mb-3 font-semibold"
+                                className="mb-3 font-semibold dark:text-black"
                                 type="text"
                                 value={displayName}
                                 onChange={(e) => setDisplayName(e.target.value)}
@@ -77,7 +77,7 @@ const UpdateProfile = () => {
                         <label>
                             Email:
                             <input
-                                className="mb-3 font-semibold"
+                                className="mb-3 font-semibold dark:text-black"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ const UpdateProfile = () => {
                         <label>
                             Photo URL:
                             <input
-                                className="mb-3 font-semibold"
+                                className="mb-3 font-semibold dark:text-black"
                                 type="text"
                                 value={photoURL}
                                 onChange={(e) => setPhotoURL(e.target.value)}
@@ -99,11 +99,11 @@ const UpdateProfile = () => {
                         {error && <p className="text-red-500">{error}</p>}
                         {isEditing ? (
                             <>
-                                <button className="btn btn-outline" type="submit">Save Changes</button>
+                                <button className="btn btn-outline dark:text-white" type="submit">Save Changes</button>
                                 
                             </>
                         ) : (
-                            <button className="btn btn-outline" onClick={() => setIsEditing(true)}>Edit Profile</button>
+                            <button className="btn btn-outline dark:text-white" onClick={() => setIsEditing(true)}>Edit Profile</button>
                         )}
                     </form>
                 )}

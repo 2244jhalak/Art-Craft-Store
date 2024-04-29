@@ -71,17 +71,17 @@ const handleGithub=()=>{
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" className="input input-bordered dark:text-black" required />
         </div>
         <div className="relative">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
+          <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input dark:text-black input-bordered" required />
           <p className="absolute lg:bottom-[14px] md:bottom-[14px] bottom-[14px] right-5" onClick={()=>setShowPassword(!showPassword)}>
             {
-                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                showPassword ? <FaEyeSlash className="dark:text-black"></FaEyeSlash> : <FaEye className="dark:text-black"></FaEye>
             }
           </p>
          
@@ -100,7 +100,7 @@ const handleGithub=()=>{
                 <FaGithub className='mr-3'></FaGithub>
                 <h2 className='text-black font-semibold'>Login with Github</h2>
       </div>
-      <p className="ml-8 mb-4">New to website? Please <Link className="underline" to="/register">Register</Link></p>
+      <p className="ml-8 mb-4 dark:text-black">New to website? Please <Link className="underline" to="/register">Register</Link></p>
     </div>
     
   </div>

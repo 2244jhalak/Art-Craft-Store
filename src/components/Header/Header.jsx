@@ -1,5 +1,6 @@
 
-
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 import {FaRegUserCircle,FaWindowClose,FaBars } from 'react-icons/fa';
 
 import { useContext, useState } from "react";
@@ -32,7 +33,7 @@ const Header = () => {
              </p>
          </div> 
          <h3 className='text-3xl text-white lg:pl-2 md:pr-2 pr-2 font-semibold'>RusticRopeCrafts</h3>
-         <ul className={`${open ?'top-12 block z-50':'-top-80 text-white bg-blue-950'} flex lg:flex-row flex-col px-2 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-20 bg-blue-950 text-white`}>
+         <ul className={`${open ?'top-12 block z-50':'-top-96 text-white bg-blue-950'} flex lg:flex-row flex-col px-2 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-3 bg-blue-950 text-white`}>
         <li className='hover:text-orange-400'><Link to="/">Home</Link></li>
         <li className='hover:text-orange-400'><Link to="/all">All Art & craft Items</Link></li>
         <li className='hover:text-orange-400'><Link to="/addCraft">Add Craft Item</Link></li>
@@ -50,7 +51,11 @@ const Header = () => {
               </Link>
               
               
-              <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+              
+              <div data-tooltip-id="my-tooltip"
+  data-tooltip-content={user.displayName}
+  data-tooltip-place="top">
+    <Tooltip id="my-tooltip" />
   
 
               

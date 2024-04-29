@@ -63,29 +63,29 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+          <input type="text" placeholder="name" name="name" className="input input-bordered dark:text-black" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" className="input input-bordered dark:text-black" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input type="text" placeholder="photoURL" name="photo" className="input input-bordered" required />
+          <input type="text" placeholder="photoURL" name="photo" className="input input-bordered dark:text-black" required />
         </div>
         <div className="relative">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
+          <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered dark:text-black" required />
           <p className="absolute lg:bottom-[14px] md:bottom-[14px] bottom-[14px] right-5" onClick={()=>setShowPassword(!showPassword)}>
             {
-                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                showPassword ? <FaEyeSlash className='dark:text-black'></FaEyeSlash> : <FaEye className='dark:text-black'></FaEye>
             }
           </p>
          
@@ -96,7 +96,7 @@ const Register = () => {
         </div>
       </form>
       
-      <p className="ml-8 mb-4">Already have an account? Please <Link className="underline" to="/login">Login</Link></p>
+      <p className="ml-8 mb-4 dark:text-black">Already have an account? Please <Link className="underline" to="/login">Login</Link></p>
     </div>
     
     
