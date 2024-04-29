@@ -17,6 +17,7 @@ import AuthProvider from './provider/AuthProvider';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import AllArtAndCraft from './components/AllArtAndCraft/AllArtAndCraft';
 import AddCraftItem from './components/AddCraftItem/AddCraftItem';
+import UpdateCraftItem from './components/UpdateCraftItem/UpdateCraftItem';
 import MyArtAndCraft from './components/MyArtAndCraft/MyArtAndCraft';
 import PrivateRoute from './Routes/PrivateRoute';
 
@@ -24,6 +25,7 @@ import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 
 import CraftDetails from './components/CraftDetails/CraftDetails';
+import SingleCategory from './components/SingleCategory/SingleCategory';
 
 
 const router = createBrowserRouter([
@@ -39,11 +41,16 @@ const router = createBrowserRouter([
       {
         path:"/all",
         element:<AllArtAndCraft></AllArtAndCraft>,
-        loader:()=>fetch(' http://localhost:5000/craft')
+        loader:()=>fetch('http://localhost:5000/craft')
       },
       {
         path:"/addCraft",
         element:<PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
+      },
+      {
+        path:'/updateCraft/:id',
+        element:<UpdateCraftItem></UpdateCraftItem>,
+        loader:({ params })=>fetch(`http://localhost:5000/updateCraft/${params.id}`)
       },
       {
         path:"/myCraft",
@@ -55,6 +62,13 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <CraftDetails></CraftDetails>,
         loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+      }
+      
+      ,
+      {
+        path: "/category/:subCategory",
+        element: <SingleCategory></SingleCategory>,
+        loader: ({ params }) => fetch(`http://localhost:5000/category/${params.subCategory}`)
       }
       
       ,

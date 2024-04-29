@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 import { FaStar,FaPen,FaTrash } from 'react-icons/fa';
 
 
@@ -9,14 +10,54 @@ import { FaStar,FaPen,FaTrash } from 'react-icons/fa';
 const MyArtAndCraft = () => {
     const {user} =useContext(AuthContext);
     const [crafts,setCrafts] =useState([]);
+    
     useEffect(()=>{
         fetch(`http://localhost:5000/myProduct/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setCrafts(data))
     },[user])
+   
+   
+    const handleDelete=id=>{
+        console.log(id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/craft/${id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.deletedCount>0){
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                  });
+                  // eslint-disable-next-line react/prop-types
+                  const remaining=crafts.filter(craft=>craft._id!==id);
+                setCrafts(remaining);
+                
+            }
+            
+        })
+              
+            }
+          });
+
+    }
+
     return (
         <div className="my-10">
             <h2>This is my world {crafts.length}</h2>
+           
             <div className="grid grid-cols-2 px-40 gap-20">
 
             {
@@ -51,8 +92,8 @@ const MyArtAndCraft = () => {
          
   </div>
   <div className='text-right mx-4 my-3'>
-  <Link to={`/craft/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'><FaPen></FaPen></button></Link>
-  <Link to={`/craft/${craft._id}`}><button className='btn text-white bg-green-600'><FaTrash></FaTrash></button></Link>
+  <Link to={`/updateCraft/${craft._id}`}><button className='btn text-white bg-blue-950 mr-3'><FaPen></FaPen></button></Link>
+ <button onClick={()=>handleDelete(craft._id)} className='btn text-white bg-green-600'><FaTrash></FaTrash></button>
     
   </div>
 </div>
@@ -64,6 +105,5 @@ const MyArtAndCraft = () => {
             
         </div>
     );
-};
-
+          }
 export default MyArtAndCraft;

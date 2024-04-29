@@ -37,7 +37,7 @@ const Banner = () => {
             </div>
             <div className='text-2xl my-5 font-semibold text-center'>
             <Typewriter
-      words={['Welcome to RusticRopeCraft, where timeless elegance meets sustainable craftsmanship.']}
+      words={['Welcome to RusticRopeCrafts, where timeless elegance meets sustainable craftsmanship.']}
       loop= {1}
       cursor
       cursorStyle=''
