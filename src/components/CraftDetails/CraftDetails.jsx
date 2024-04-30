@@ -9,7 +9,7 @@ const CraftDetails = () => {
     
     console.log(craft);
     return (
-        <div className='px-20 my-16'>
+        <div className='lg:px-20 md:px-10 px-5 my-16'>
             <div>
             <div className="card dark:text-black lg:card-side bg-base-100 shadow-xl">
   <figure><img className='lg:h-[400px] md:h-[400px] h-[200px]' src={image} alt="Album"/></figure>

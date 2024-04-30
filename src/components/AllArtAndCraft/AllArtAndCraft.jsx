@@ -7,7 +7,7 @@ const AllArtAndCraft = () => {
     
     return (
         <div>
-            <h2>Here are all : {crafts.length}</h2>
+            <h2 className="text-2xl font-semibold">All Art & craft items : {crafts.length}</h2>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}

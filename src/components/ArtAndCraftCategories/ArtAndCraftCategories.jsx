@@ -17,6 +17,8 @@ const ArtAndCraftCategories = () => {
     return (
         <div>
             <h3 className="text-3xl font-semibold text-center my-10">Art & Craft Categories</h3>
+            
+            
            
                  
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">

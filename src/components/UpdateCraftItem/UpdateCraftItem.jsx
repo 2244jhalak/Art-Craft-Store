@@ -63,7 +63,7 @@ const UpdateCraftItem = () => {
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black" defaultValue={stockStatus} type="text" name="stockStatus" placeholder="stockStatus" id="" />
                     <input className="h-10 bg-gray-100 rounded pl-5 text-black"  defaultValue={User_Name} type="text" name="User_Name" placeholder="User_Name" id="" />
                     <input className="h-10 bg-gray-100 rounded col-span-2 pl-5 text-black" defaultValue={User_Email} type="email" name="User_Email" placeholder="User_Email" id="" />
-                    <input className="bg-green-600 text-white font-semibold rounded col-span-2 pl-5 cursor-pointer h-10" type="submit" value="Add" />
+                    <input className="bg-green-600 text-white font-semibold rounded col-span-2 pl-5 cursor-pointer h-10" type="submit" value="Update" />
                 </div>
             </form>
             

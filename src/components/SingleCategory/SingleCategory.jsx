@@ -6,17 +6,19 @@ const SingleCategory = () => {
     const crafts=useLoaderData();
     
     console.log(crafts);
+    
    
     
     
     return (
         <div>
+             
 
             {
                 crafts.map(craft=>
                     <div key={craft._id} className='px-20 my-16'>
                     <div>
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card dark:text-black lg:card-side bg-base-100 shadow-xl">
           <figure><img className='lg:h-[400px] md:h-[400px] h-[200px]' src={craft.image} alt="Album"/></figure>
           <div className="lg:p-5 md:p-5 p-3 space-y-3">
             <h2 className="lg:text-3xl md:text-3xl text-2xl  font-bold">{craft.item_name}</h2>

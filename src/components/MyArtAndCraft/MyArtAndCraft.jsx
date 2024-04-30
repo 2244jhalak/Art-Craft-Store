@@ -58,7 +58,7 @@ const MyArtAndCraft = () => {
 
     return (
         <div className="my-10">
-            <h2>This is my world {crafts.length}</h2>
+            <h2 className="text-3xl lg:px-40 md:px-24 font-semibold">This is my craft list : {crafts.length}</h2>
             
            
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-40 lg:gap-20">
