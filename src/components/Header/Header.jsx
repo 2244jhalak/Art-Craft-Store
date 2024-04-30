@@ -33,22 +33,17 @@ const Header = () => {
              </p>
          </div> 
          <h3 className='text-3xl text-white lg:pl-2 md:pr-2 pr-2 font-semibold'>RusticRopeCrafts</h3>
-         <ul className={`${open ?'top-12 block z-50':'-top-96 text-white bg-blue-950'} flex lg:flex-row flex-col px-2 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-3 bg-blue-950 text-white`}>
-        <li className='hover:text-orange-400'><Link to="/">Home</Link></li>
-        <li className='hover:text-orange-400'><Link to="/all">All Art & craft Items</Link></li>
-        <li className='hover:text-orange-400'><Link to="/addCraft">Add Craft Item</Link></li>
-        <li className='hover:text-orange-400'><Link to="/myCraft">My Art&Craft List</Link></li>
+         <ul className={`${open ?'top-12 block z-50':'-top-96 text-white bg-blue-950'} flex lg:flex-row flex-col px-10 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-3 bg-blue-950 text-white`}>
+        <li className='hover:text-orange-400 mr-4'><Link to="/">Home</Link></li>
+        <li className='hover:text-orange-400 mr-4'><Link to="/all">All Art & craft Items</Link></li>
+        <li className='hover:text-orange-400 mr-4'><Link to="/addCraft">Add Craft Item</Link></li>
+        <li className='hover:text-orange-400 mr-4'><Link to="/myCraft">My Art&Craft List</Link></li>
         <li>
         {
       user ? 
            <div className="flex items-center lg:flex-row flex-col">
               
-              <Link to="/updateProfile">
-                  <button className="btn btn-ghost">Update Profile</button>
-              </Link>
-              <Link to="/userProfile">
-                  <button className="btn btn-ghost">User Profile</button>
-              </Link>
+              
               
               
               
@@ -79,9 +74,15 @@ const Header = () => {
 
           
              :
+            <div className='flex'>
             <Link to="/login">
                     <button className="btn btn-primary font-bold ml-4 text-white">Login</button>
             </Link>
+            <Link to="/register">
+                    <button className="btn btn-primary font-bold ml-4 text-white">Register</button>
+            </Link>
+            
+            </div>
     }
     </li>
       

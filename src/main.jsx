@@ -21,8 +21,7 @@ import UpdateCraftItem from './components/UpdateCraftItem/UpdateCraftItem';
 import MyArtAndCraft from './components/MyArtAndCraft/MyArtAndCraft';
 import PrivateRoute from './Routes/PrivateRoute';
 
-import UserProfile from './components/UserProfile/UserProfile';
-import UpdateProfile from './components/UpdateProfile/UpdateProfile';
+
 
 import CraftDetails from './components/CraftDetails/CraftDetails';
 import SingleCategory from './components/SingleCategory/SingleCategory';
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
       {
         path:"/all",
         element:<AllArtAndCraft></AllArtAndCraft>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader:()=>fetch('https://b9a10-server-side-2244jhalak.vercel.app/craft')
       },
       {
         path:"/addCraft",
@@ -50,7 +49,7 @@ const router = createBrowserRouter([
       {
         path:'/updateCraft/:id',
         element:<UpdateCraftItem></UpdateCraftItem>,
-        loader:({ params })=>fetch(`http://localhost:5000/updateCraft/${params.id}`)
+        loader:({ params })=>fetch(`https://b9a10-server-side-2244jhalak.vercel.app/updateCraft/${params.id}`)
       },
       {
         path:"/myCraft",
@@ -61,14 +60,14 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+        loader: ({ params }) => fetch(`https://b9a10-server-side-2244jhalak.vercel.app/details/${params.id}`)
       }
       
       ,
       {
         path: "/category/:subCategory",
         element: <SingleCategory></SingleCategory>,
-        loader: ({ params }) => fetch(`http://localhost:5000/category/${params.subCategory}`)
+        loader: ({ params }) => fetch(`https://b9a10-server-side-2244jhalak.vercel.app/category/${params.subCategory}`)
       }
       
       ,
@@ -84,14 +83,7 @@ const router = createBrowserRouter([
       
      
       
-      {
-        path:"/userProfile",
-        element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
-      },
-      {
-        path:"/updateProfile",
-        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
-      },
+      
      
     ]
   },

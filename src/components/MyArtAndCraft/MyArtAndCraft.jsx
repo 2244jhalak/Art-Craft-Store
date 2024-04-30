@@ -13,7 +13,7 @@ const MyArtAndCraft = () => {
     
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/myProduct/${user?.email}`)
+        fetch(`https://b9a10-server-side-2244jhalak.vercel.app/myProduct/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setCrafts(data))
     },[user])
@@ -32,7 +32,7 @@ const MyArtAndCraft = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/craft/${id}`,{
+                fetch(`https://b9a10-server-side-2244jhalak.vercel.app/craft/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

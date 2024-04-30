@@ -1,22 +1,27 @@
 
 
 
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const ArtAndCraftCategories = () => {
     
     const [crafts,setCrafts] =useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/craft')
+        fetch('https://b9a10-server-side-2244jhalak.vercel.app/craft')
         .then(res=>res.json())
         .then(data=>setCrafts(data))
     },[])
+   
     
     return (
         <div>
+            
             <h3 className="text-3xl font-semibold text-center my-10">Art & Craft Categories</h3>
+            
             
             
            

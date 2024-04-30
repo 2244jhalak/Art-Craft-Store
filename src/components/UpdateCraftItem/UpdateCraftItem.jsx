@@ -24,7 +24,7 @@ const UpdateCraftItem = () => {
         const User_Email=form.User_Email.value;
         const craft={image,item_name,subcategory_Name,short_description,price,rating,customization,processing_time,stockStatus,User_Name,User_Email};
         console.log(craft);
-        fetch(`http://localhost:5000/updateCraft/${_id}`,{   
+        fetch(`https://b9a10-server-side-2244jhalak.vercel.app/updateCraft/${_id}`,{   
             method: "PUT",
             headers: {
                    "Content-Type": "application/json",
