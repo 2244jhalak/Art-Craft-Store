@@ -21,4 +21,4 @@ This Art & Craft Store project is a dynamic and interactive website designed to 
 - Start the server: `npm start`
 
 ## Live Link
-- [Live Demo](https://b9a10-client-side-2244jhalak.web.app/)
+- [RusticRopeCrafts](https://b9a10-client-side-2244jhalak.web.app/)
