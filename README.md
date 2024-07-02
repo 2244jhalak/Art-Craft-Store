@@ -1,7 +1,7 @@
-# Project 1: Example Project
+
 
 ## Overview
-Example Project is a web application designed to streamline task management for teams. It offers real-time updates, user authentication, and priority management to enhance productivity.
+This Art & Craft Store project is a dynamic and interactive website designed to cater to the creative community. It allows users to showcase their artistic and craft creations while also enabling them to explore and draw inspiration from the works of others. The platform is built using a modern technology stack to ensure a seamless and engaging user experience.
 
 ## Features
 - Real-time task updates
