@@ -16,7 +16,7 @@ This Art & Craft Store project is a dynamic and interactive website designed to 
 - Bootstrap
 
 ## How to Run Locally
-- Clone the repository: `git clone https://github.com/your-username/example-project.git`
+- Clone the repository: `https://github.com/2244jhalak/Art-Craft-Store.git`
 - Install dependencies: `npm install`
 - Start the server: `npm start`
 
