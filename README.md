@@ -8,6 +8,7 @@ This Art & Craft Store project is a dynamic and interactive website designed to 
 - Art & Craft Item Management
 - View Other Users’ Creations
 
+## Key Technologies
 - React.js
 - Node.js
 - Express.js
