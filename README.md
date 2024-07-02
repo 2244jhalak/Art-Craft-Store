@@ -13,7 +13,7 @@ This Art & Craft Store project is a dynamic and interactive website designed to 
 - Node.js
 - Express.js
 - MongoDB
-- Bootstrap
+- Firebase
 
 ## How to Run Locally
 - Clone the repository: `https://github.com/2244jhalak/Art-Craft-Store.git`
